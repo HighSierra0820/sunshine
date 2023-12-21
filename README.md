@@ -8,6 +8,7 @@
 ## How this work & Notes
 - images of glyphs are generated and stored in `tgscc/`
   - character set: [_Table of General Standard Chinese Characters_](https://en.wikipedia.org/wiki/Table_of_General_Standard_Chinese_Characters)
+  - font used: `simhei.ttf`
   - only non-blank glyphs are stored; characters with 0 _windows_ are represented by `Ｘ` (fullwidth capital x)
 - differences of input image (sliced) and glyphs in the character set are calculated, among which the character with lowest difference is taken
 - initial execution of `solve.py` may experience prolonged runtime (possibly due to Explorer indexing 5000+ files)
