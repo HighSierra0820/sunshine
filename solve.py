@@ -37,7 +37,7 @@ if __name__ == '__main__':
         minChar = ''
         for filename in filelist:
             image = cv2.imread(f"{assetFolder}{filename}")
-            difference = np.sum(np.abs(targetSplit[i] - image))
+            difference = 1-np.equal(targetSplit[i], image).mean()
             if difference < minDifference:
                 minDifference = difference
                 minChar = filename[:4]
